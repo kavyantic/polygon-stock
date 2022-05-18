@@ -7,6 +7,7 @@ from flask_socketio import SocketIO
 from flask_socketio import send, emit
 
 
+
 stock_list = ["AAPL", "FB", "SPCE", "GOOGL" ,"AMZN","MSFT", "LPL"]
 
 stock_list_formatted = ["Q."+stock for stock in stock_list]
