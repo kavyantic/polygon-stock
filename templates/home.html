@@ -1,0 +1,47 @@
+{% include 'partials/start.html' %}
+<!-- <select class="form-select form-select-sm mb-3 theme-selector" aria-label=".form-select-sm example">
+  <option >Black</option>
+  <option selected>White</option>
+</select> -->
+<h3 id="log-heading" style="margin:2%;color: rgb(167, 56, 56);">Polygon.IO</h3>
+
+<!-- <div class="time-setter-button input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-outline-secondary" type="button">Button</button>
+  </div>
+  <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+</div> -->
+<button style="float: right;margin: 2% 5%;" onclick="fetch('/opentab')">Debug</button>
+<div class="script-container">
+    <table class="table  table-success">
+        <thead >
+          <thead>
+            <tr>
+              <th scope="col">NAME</th>
+              <th>Opning(Today)</th>
+              <th>Open</th>
+              <th>Close</th>
+              <th>VolumePrice</th>
+              <th>High</th>
+              <th>AverageTradeSize</th>
+            </tr>
+          </thead>
+        </thead>
+        <tbody>
+            {% for stock in stock_list %}
+             <tr id="{{stock}}">
+              <td class="sym">{{stock}}</td>
+              <td class="openingToday">____</td>
+              <td class="opening">____</td> 
+              <td class="closing">____</td>
+              <td class="volumePrice">____</td>
+              <td class="high">____</td>
+              <td class="tradeSize">____</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+      </table>
+</div>
+{% include 'partials/end.html' %}
+
